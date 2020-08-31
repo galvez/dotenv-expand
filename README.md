@@ -34,3 +34,14 @@ dotenvExpand(myEnv)
 See [test/.env](./test/.env) for examples of variable expansion in your `.env`
 file. 
 
+### Curly braces
+
+To only recognize variables wrapped in curly braces (`${VAR}`):
+
+```js
+var dotenv = require('dotenv')
+var dotenvExpand = require('dotenv-expand')
+
+var myEnv = dotenv.config()
+dotenvExpand(myEnv, { requireCurlyBraces: true })
+```
